@@ -1,0 +1,6 @@
+_(\w+)\s+([a-z0-9A-Z]{8})\s+defined\s+in\s+\w+.o\s+section\s+.+\n\s+used in\s+
+_([a-zA-Z0-9_]+)\s+([a-z0-9A-Z]{8})\s+defined\s+in\s+[a-zA-Z0-9_]+.o\s+section\s+.+\n\s+used in\s+
+_([a-zA-Z0-9_]+)\s+([a-z0-9A-Z]{8})\s+defined\s+in\s+[a-zA-Z0-9_]+.o\s+section\s+.+\n\s+used in\s+([a-zA-Z0-9_]+.o)\s*\n\s*([a-zA-Z0-9_]+.o)
+_([a-zA-Z0-9_]+)\s+([a-z0-9A-Z]{8})\s+defined\s+in\s+[a-zA-Z0-9_]+.o\s+section\s+.+\n\s+used in\s+([a-zA-Z0-9_]+.o)\s*\n\s*(\w+.o)\n\s*(\w+.o)
+r = re.compile(r"_([a-zA-Z0-9_]+)\s+([a-z0-9A-Z]{8})\s+defined\s+in\s+[a-zA-Z0-9_]+.o\s+section\s+.+\n\s+used in\s+([a-zA-Z0-9_]+.o)\s*\n(\s*(\w+.o)\n)")
+r = re.compile(r"_([a-zA-Z0-9_]+)\s+([a-z0-9A-Z]{8})\s+defined\s+in\s+[a-zA-Z0-9_]+.o\s+section\s+.+\n\s+used in\s+([a-zA-Z0-9_]+.o)\s*\n(\s*\w+.o\n)*")
